@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sierra 28K — Outdoor Activity Guide</title>
+  <meta name="description" content="Walks, hikes, runs, bouldering, and peak bagging across the Sierra Nevada — Lake Tahoe, Yosemite, Mammoth, Bishop, and more.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="." aria-label="Sierra 28K — reload">
+      <img src="logo_sierra28k.svg" alt="Sierra 28K" class="logo-img">
+      <span class="wordmark-sub">Outdoor Activity Guide</span>
+    </a>
+    <nav class="header-nav">
+      <button id="btn-about" class="nav-btn nav-btn--subtle" aria-label="About Sierra 28K">ⓘ</button>
+      <button id="btn-my-list" class="nav-btn" aria-label="My List">
+        ★ My List <span id="star-count" class="star-badge" hidden>0</span>
+      </button>
+      <button id="btn-share" class="nav-btn" aria-label="Share" hidden>↑ Share</button>
+    </nav>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="chip" data-activity="walk">Walk</button>
+    <button class="chip" data-activity="family_walk">Family</button>
+    <button class="chip" data-activity="run">Run</button>
+    <button class="chip" data-activity="hike">Hike</button>
+    <button class="chip" data-activity="bouldering">Bouldering</button>
+    <button class="chip" data-activity="peak_bagging">Peak Bagging</button>
+    <div class="filter-sep"></div>
+    <button class="chip" data-diff="2">Easy</button>
+    <button class="chip" data-diff="3">Moderate</button>
+    <button class="chip" data-diff="4">Hard</button>
+    <div class="filter-sep"></div>
+    <button id="btn-in-season" class="chip chip--toggle" aria-pressed="false">In Season</button>
+    <button id="btn-starred-only" class="chip chip--toggle" aria-pressed="false">★ Starred</button>
+  </div>
+</div>
+<div class="expand-bar">
+  <div class="expand-bar-inner">
+    <button id="btn-expand-all" class="expand-btn">Expand all</button>
+    <span class="expand-sep">·</span>
+    <button id="btn-collapse-all" class="expand-btn">Collapse all</button>
+    <input type="search" id="search-input" class="search-input" placeholder="Search…" autocomplete="off">
+  </div>
+</div>
+
+<main id="main" class="main-content">
+  <div id="loading" class="loading-state">
+    <div class="loading-spinner"></div>
+    <p>Loading…</p>
+  </div>
+  <div id="zones-container" class="zones-container" hidden></div>
+  <div id="empty-state" class="empty-state" hidden>No activities match your filters.</div>
+</main>
+
+<!-- My List panel -->
+<aside id="panel-my-list" class="side-panel" aria-hidden="true" hidden>
+  <div class="panel-header">
+    <h2 class="panel-title">My List</h2>
+    <button class="panel-close" id="btn-close-panel" aria-label="Close">✕</button>
+  </div>
+  <div class="panel-body" id="panel-list-body">
+    <p class="panel-empty">Star a region, activity type, or individual activity to build your list.</p>
+  </div>
+  <div class="panel-footer" id="panel-footer" hidden>
+    <div class="share-section-label">Share your list</div>
+    <div class="share-row">
+      <button class="share-fmt-btn" id="share-link">🔗 Copy link</button>
+      <button class="share-fmt-btn" id="share-text">Plain text</button>
+      <button class="share-fmt-btn" id="share-md">Markdown</button>
+      <button class="share-fmt-btn" id="share-csv">CSV</button>
+    </div>
+    <div id="share-feedback" class="share-feedback" hidden></div>
+    <button class="clear-stars-btn" id="btn-clear-stars">Clear all stars</button>
+  </div>
+</aside>
+<div id="panel-overlay" class="panel-overlay" hidden></div>
+
+<!-- About modal -->
+<div id="modal-about" class="modal-overlay" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-about-title">
+    <div class="modal-header">
+      <h2 class="modal-title" id="modal-about-title">About Sierra 28K</h2>
+      <button class="modal-close" id="btn-close-about" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <p><strong>Sierra 28K</strong> is a hand-curated outdoor activity guide covering the Sierra Nevada and surrounding ranges — walks, family-friendly outings, trail runs, hikes, bouldering spots, and peak-bagging objectives across seven regions from Lake Tahoe south to Sequoia.</p>
+
+      <h3>The data</h3>
+      <p>Regions covered: North Lake Tahoe, South Lake Tahoe, Tuolumne Meadows, Mammoth Lakes, Bishop &amp; the Eastern Sierra, Yosemite Valley, and Sequoia/Kings Canyon. Activities are manually researched and reflect <em>typical</em> conditions — not live trail status. Closures, fire restrictions, snow, and seasonal road access can change without notice. Always verify conditions before heading out.</p>
+
+      <h3>Filters &amp; search</h3>
+      <p>The chips at the top filter by activity type (Walk, Family, Run, Hike, Bouldering, Peak Bagging) or difficulty (Easy, Moderate, Hard). Multiple chips can be active at once. <strong>In Season</strong> shows activities that are typically accessible during the current calendar month based on historical patterns. <strong>Search</strong> filters place names in real time. Expand/collapse all regions with the controls just above the list.</p>
+
+      <h3>Stars &amp; My List</h3>
+      <p>Tap ★ on any region header or individual activity row to add it to your list. Your stars are saved in this browser's local storage — there are no user accounts and nothing is sent to a server. Clearing your browser data will erase your list. Use <strong>Share → Copy link</strong> to generate a permanent URL that encodes your current selections, so you can bookmark it or send it to someone.</p>
+
+      <h3>Links</h3>
+      <p>Each place shows an <em>info ↗</em> link to the most authoritative source we could find (National Park Service, US Forest Service, AllTrails, local trail orgs, etc.). Each activity has a <em>Search ↗</em> link that runs a targeted Google search for current conditions, trip reports, and directions.</p>
+
+      <h3>Sharing your list</h3>
+      <p>Once you've starred items, open <strong>My List</strong> and use the share buttons to copy your list as a shareable URL, plain text, Markdown, or a CSV spreadsheet with full activity details.</p>
+
+      <h3>No accounts · no tracking</h3>
+      <p>This is a static website hosted on GitHub Pages, served from a plain JSON data file. There are no user accounts, no logins, no tracking cookies, and no analytics. Nothing you do here is recorded anywhere.</p>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-cta" id="btn-got-it">Got it</button>
+    </div>
+  </div>
+</div>
+
+<!-- Templates -->
+<template id="tmpl-zone">
+  <section class="zone-section">
+    <div class="zone-header">
+      <div class="zone-header-left">
+        <button class="star-btn zone-star" aria-label="Star region">★</button>
+        <span class="zone-name"></span>
+        <span class="zone-meta"></span>
+      </div>
+      <button class="zone-toggle" aria-label="Toggle">▾</button>
+    </div>
+    <div class="place-list"></div>
+  </section>
+</template>
+
+<template id="tmpl-place">
+  <article class="place-card">
+    <div class="place-header">
+      <span class="place-name"></span>
+      <div class="place-badges"></div>
+    </div>
+    <div class="activities-list"></div>
+  </article>
+</template>
+
+<template id="tmpl-activity">
+  <div class="activity-row">
+    <button class="star-btn activity-star" aria-label="Star activity">★</button>
+    <div class="activity-body">
+      <div class="activity-line1">
+        <span class="act-type"></span>
+        <span class="act-stats"></span>
+        <span class="act-season"></span>
+      </div>
+      <p class="activity-notes"></p>
+      <p class="activity-conditions"></p>
+      <div class="activity-links"></div>
+    </div>
+  </div>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>
