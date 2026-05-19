@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-03-23T13:48:12.785070",
+    "generated_at": "2026-05-18T14:45:43.251548",
     "total_zones": 7,
-    "total_places": 302,
-    "total_activities": 400
+    "total_places": 307,
+    "total_activities": 408
   },
   "zones": [
     {
@@ -419,6 +419,118 @@
           ]
         },
         {
+          "id": 353,
+          "name": "Flume Trail – Marlette Lake to Tunnel Creek",
+          "place_type": "trailhead",
+          "lat": 39.2061,
+          "lng": -119.9061,
+          "address": "Spooner Lake State Park, Hwy 50 & Hwy 28, Incline Village, NV 89451",
+          "parking_notes": "NV State Park day-use lot; $10/vehicle; fills by 9am summer weekends. Alternative: free parking at Flume Trail Bikes shop (1115 Tunnel Creek Rd) and shuttle up to Spooner Lake ($).",
+          "kid_friendly": false,
+          "image_url": null,
+          "canonical_url": "https://www.alltrails.com/trail/us/nevada/flume-trail",
+          "activities": [
+            {
+              "id": 460,
+              "activity_type": "hike",
+              "activity_label": "Hike",
+              "difficulty": 3,
+              "difficulty_label": "Moderate",
+              "distance_km": 12.9,
+              "elevation_gain_m": 335.0,
+              "notes": "8-mile point-to-point from Spooner Lake to Tunnel Creek Road via Marlette Lake. First 4 miles climb ~1,100 ft on dirt road through aspen groves to Marlette Lake (8,157 ft). The iconic Flume section — 4.5 miles of nearly-flat singletrack carved 1,600 ft above Sand Harbor — delivers the best lake views in Tahoe. Remnants of the 1860s logging flume visible along the route. World-famous mountain bike trail: expect frequent bikers at speed, especially on even days when TRT is open to bikes. Stay alert on narrow exposed sections. Shuttle available from Tunnel Creek to Spooner Lake ($).",
+              "run_type": null,
+              "best_months": null,
+              "conditions_note": null,
+              "search_url": "https://www.google.com/search?q=Flume%20Trail%20%E2%80%93%20Marlette%20Lake%20to%20Tunnel%20Creek%20North%20Lake%20Tahoe%20Hike%20%28site%3Anps.gov%20OR%20site%3Aalltrails.com%20OR%20site%3Atahoetrails.com%29"
+            }
+          ]
+        },
+        {
+          "id": 351,
+          "name": "Granite Chief Summit",
+          "place_type": "trailhead",
+          "lat": 39.2107,
+          "lng": -120.2764,
+          "address": "Granite Chief Trailhead, Olympic Valley, CA 96146",
+          "parking_notes": "Street parking near Palisades Tahoe base; free; fills early on race days",
+          "kid_friendly": false,
+          "image_url": null,
+          "canonical_url": "https://www.fs.usda.gov/sites/nfs/files/r05/tahoe/publication/Granite%20Chief_2025_0.pdf",
+          "activities": [
+            {
+              "id": 455,
+              "activity_type": "hike",
+              "activity_label": "Hike",
+              "difficulty": 4,
+              "difficulty_label": "Hard",
+              "distance_km": 10.8,
+              "elevation_gain_m": 599.0,
+              "notes": "6.7-mile out-and-back to 9,010 ft summit from Olympic Valley. Gains ~1,965 ft via singletrack and PCT connection. No distinct summit view but excellent alpine terrain. Trail passes private property easements — stay on trail.",
+              "run_type": null,
+              "best_months": null,
+              "conditions_note": null,
+              "search_url": "https://www.google.com/search?q=Granite%20Chief%20Summit%20North%20Lake%20Tahoe%20Hike%20%28site%3Anps.gov%20OR%20site%3Aalltrails.com%20OR%20site%3Atahoetrails.com%29"
+            }
+          ]
+        },
+        {
+          "id": 350,
+          "name": "Johnson Canyon Overlook",
+          "place_type": "trailhead",
+          "lat": 39.3253,
+          "lng": -120.2603,
+          "address": "Glacier Way Trailhead, Tahoe Donner, Truckee, CA 96161",
+          "parking_notes": "Large paved lot at I-80 Donner Lake exit; free; vault toilets; winter plowed",
+          "kid_friendly": false,
+          "image_url": null,
+          "canonical_url": "https://www.alltrails.com/trail/us/california/johnson-canyon-overlook-via-glacier-way-trail",
+          "activities": [
+            {
+              "id": 459,
+              "activity_type": "hike",
+              "activity_label": "Hike",
+              "difficulty": 2,
+              "difficulty_label": "Easy",
+              "distance_km": 3.2,
+              "elevation_gain_m": 125.0,
+              "notes": "2-mile out-and-back on Glacier Way to Johnson Canyon overlook. Gains ~410 ft through meadows and forest. Donner Lake and Sierra Crest views. Wildflowers in summer, snowshoeing in winter. Good warm-up for longer Donner Lake Rim Trail routes.",
+              "run_type": null,
+              "best_months": null,
+              "conditions_note": null,
+              "search_url": "https://www.google.com/search?q=Johnson%20Canyon%20Overlook%20North%20Lake%20Tahoe%20Hike%20%28site%3Anps.gov%20OR%20site%3Aalltrails.com%20OR%20site%3Atahoetrails.com%29"
+            },
+            {
+              "id": 454,
+              "activity_type": "run",
+              "activity_label": "Run",
+              "difficulty": 2,
+              "difficulty_label": "Easy",
+              "distance_km": 3.2,
+              "elevation_gain_m": 125.0,
+              "notes": "2-mile out-and-back on Glacier Way to Johnson Canyon overlook. Gentle 410 ft gain through open meadows and Jeffrey pine forest. Donner Lake and Sierra Crest views. Multi-use trail popular with runners and bikers. Wildflowers in summer, snowshoeing in winter.",
+              "run_type": "route",
+              "best_months": null,
+              "conditions_note": null,
+              "search_url": "https://www.google.com/search?q=Johnson%20Canyon%20Overlook%20North%20Lake%20Tahoe%20Run%20%28site%3Anps.gov%20OR%20site%3Aalltrails.com%20OR%20site%3Atahoetrails.com%29"
+            },
+            {
+              "id": 458,
+              "activity_type": "walk",
+              "activity_label": "Walk",
+              "difficulty": 2,
+              "difficulty_label": "Easy",
+              "distance_km": 3.2,
+              "elevation_gain_m": 125.0,
+              "notes": "2-mile out-and-back on Glacier Way to Johnson Canyon overlook. Gentle rolling grade through open meadows and Jeffrey pine forest. Donner Lake and Sierra Crest views. Multi-use trail, well-maintained and family-friendly.",
+              "run_type": null,
+              "best_months": null,
+              "conditions_note": null,
+              "search_url": "https://www.google.com/search?q=Johnson%20Canyon%20Overlook%20North%20Lake%20Tahoe%20Walk%20%28site%3Anps.gov%20OR%20site%3Aalltrails.com%20OR%20site%3Atahoetrails.com%29"
+            }
+          ]
+        },
+        {
           "id": 71,
           "name": "Kings Beach Pier Walk",
           "place_type": "starting_point",
@@ -620,11 +732,81 @@
               "difficulty_label": "Moderate",
               "distance_km": 10.0,
               "elevation_gain_m": 350.0,
-              "notes": "Alpine running at 6,200+ ft. Summer trail race series (5K/10K). Mix of singletrack and fire road. Excellent training at altitude. Chairlift access for downhill options.",
+              "notes": "Alpine running at 6,200+ ft. Summer trail race series (5K/10K). Mix of singletrack and fire road. Excellent training at altitude. Aerial Tram access to High Camp (8,200 ft) for downhill trail options — check current tram schedule before planning.",
               "run_type": "event",
               "best_months": "June–October",
               "conditions_note": "Annual event — verify current dates and registration before planning your trip",
               "search_url": "https://www.google.com/search?q=Palisades%20Tahoe%205K/10K%20Trails%20North%20Lake%20Tahoe%20Run%20%28site%3Anps.gov%20OR%20site%3Aalltrails.com%20OR%20site%3Atahoetrails.com%29"
+            }
+          ]
+        },
+        {
+          "id": 348,
+          "name": "Picnic Rock Viewpoint",
+          "place_type": "trailhead",
+          "lat": 39.2544,
+          "lng": -120.1789,
+          "address": "Hwy 267, Kings Beach, CA 96143 (TRT pullout)",
+          "parking_notes": "Small pullout on Hwy 267; free; shoulder parking if full; no facilities",
+          "kid_friendly": false,
+          "image_url": null,
+          "canonical_url": "https://www.alltrails.com/trail/us/california/trt-to-picnic-rock-viewpoint",
+          "activities": [
+            {
+              "id": 457,
+              "activity_type": "hike",
+              "activity_label": "Hike",
+              "difficulty": 3,
+              "difficulty_label": "Moderate",
+              "distance_km": 4.8,
+              "elevation_gain_m": 224.0,
+              "notes": "3-mile out-and-back on TRT to scenic granite viewpoint. Gains ~734 ft via smooth singletrack with shaded sections. Panoramic Lake Tahoe views at every step. Best views for least effort in North Tahoe.",
+              "run_type": null,
+              "best_months": null,
+              "conditions_note": null,
+              "search_url": "https://www.google.com/search?q=Picnic%20Rock%20Viewpoint%20North%20Lake%20Tahoe%20Hike%20%28site%3Anps.gov%20OR%20site%3Aalltrails.com%20OR%20site%3Atahoetrails.com%29"
+            },
+            {
+              "id": 452,
+              "activity_type": "run",
+              "activity_label": "Run",
+              "difficulty": 3,
+              "difficulty_label": "Moderate",
+              "distance_km": 4.8,
+              "elevation_gain_m": 224.0,
+              "notes": "3-mile out-and-back on TRT to scenic granite viewpoint. Gains ~734 ft via smooth singletrack with shaded sections. Panoramic Lake Tahoe views at every step. Best views for least effort in North Tahoe. Great tempo run option.",
+              "run_type": "route",
+              "best_months": null,
+              "conditions_note": null,
+              "search_url": "https://www.google.com/search?q=Picnic%20Rock%20Viewpoint%20North%20Lake%20Tahoe%20Run%20%28site%3Anps.gov%20OR%20site%3Aalltrails.com%20OR%20site%3Atahoetrails.com%29"
+            }
+          ]
+        },
+        {
+          "id": 352,
+          "name": "Rubicon Peak",
+          "place_type": "trailhead",
+          "lat": 39.0389,
+          "lng": -120.1722,
+          "address": "Rubicon Trail, Tahoma, CA 96142",
+          "parking_notes": "USFS lot at McKinney-Rubicon trailhead; free; fills by 8am weekends; vault toilets",
+          "kid_friendly": false,
+          "image_url": null,
+          "canonical_url": "https://www.fs.usda.gov/recarea/ltbmu/recarea/?recid=11759",
+          "activities": [
+            {
+              "id": 456,
+              "activity_type": "hike",
+              "activity_label": "Hike",
+              "difficulty": 4,
+              "difficulty_label": "Hard",
+              "distance_km": 6.1,
+              "elevation_gain_m": 658.0,
+              "notes": "3.8-mile out-and-back to 9,165 ft summit. Relentlessly steep ~2,200 ft gain via unmaintained use trail. Class 3 scramble on exposed summit block — experienced hikers only. 360° views of West Shore and Desolation Wilderness. Short but brutal.",
+              "run_type": null,
+              "best_months": null,
+              "conditions_note": null,
+              "search_url": "https://www.google.com/search?q=Rubicon%20Peak%20North%20Lake%20Tahoe%20Hike%20%28site%3Anps.gov%20OR%20site%3Aalltrails.com%20OR%20site%3Atahoetrails.com%29"
             }
           ]
         },

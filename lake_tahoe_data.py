@@ -151,7 +151,7 @@ NORTH_TAHOE_DATA = [
         "difficulty": 3,
         "distance_km": 10.0,
         "elevation_gain_m": 350,
-        "notes": "Alpine running at 6,200+ ft. Summer trail race series (5K/10K). Mix of singletrack and fire road. Excellent training at altitude. Chairlift access for downhill options.",
+        "notes": "Alpine running at 6,200+ ft. Summer trail race series (5K/10K). Mix of singletrack and fire road. Excellent training at altitude. Aerial Tram access to High Camp (8,200 ft) for downhill trail options — check current tram schedule before planning.",
         "run_type": "event",
         "sources": [("https://www.palisadestahoe.com/summer/events", "official")]
     },
