@@ -266,8 +266,11 @@ function renderActivity(act, place, zoneId) {
   // Links row: info · search · map
   const linksEl = row.querySelector('.activity-links');
   const linkDefs = [];
-  if (place.canonical_url)
-    linkDefs.push({ text: 'info ↗', href: place.canonical_url });
+  if (place.canonical_url) {
+    let domain = '';
+    try { domain = new URL(place.canonical_url).hostname.replace(/^www\./, ''); } catch(e) {}
+    linkDefs.push({ text: 'info ↗', href: place.canonical_url, title: domain });
+  }
   linkDefs.push({ text: 'search ↗', href: act.search_url });
   if (place.lat && place.lng)
     linkDefs.push({ text: 'map ↗', href: `https://maps.google.com/?q=${place.lat},${place.lng}` });
@@ -285,6 +288,7 @@ function renderActivity(act, place, zoneId) {
     a.rel = 'noopener noreferrer';
     a.className = 'activity-link';
     a.textContent = def.text;
+    if (def.title) a.title = def.title;
     linksEl.appendChild(a);
   });
 
