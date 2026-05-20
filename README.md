@@ -79,7 +79,7 @@ A comprehensive research dataset for significant Sierra Nevada tourism areas, co
 
 `sierra28k.db` is **not tracked in git** — it lives only on the machine where research is being done. The site itself runs from `docs/data.json`, which is committed and always up to date.
 
-**If you're cloning this repo fresh (e.g. Nico):**
+**If you're cloning this repo fresh:**
 The db doesn't exist yet. To rebuild it locally, run the init and data scripts in order:
 ```bash
 python init_db.py
