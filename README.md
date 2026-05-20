@@ -77,37 +77,14 @@ A comprehensive research dataset for significant Sierra Nevada tourism areas, co
 
 ## Database workflow (for contributors)
 
-`sierra28k.db` is **not tracked in git** — it lives only on the machine where research is being done. The site itself runs from `docs/data.json`, which is committed and always up to date.
+`sierra28k.db` is tracked in git as a binary file. Clone the repo and it's there.
 
-**If you're cloning this repo fresh:**
-The db doesn't exist yet. To rebuild it locally, run the init and data scripts in order:
+The site runs from `docs/data.json`. When you make db changes, regenerate it and commit everything together:
 ```bash
-python init_db.py
-python data_n_tahoe.py
-python lake_tahoe_data.py
-python data_s_tahoe.py
-python data_yosemite.py
-python data_mammoth.py
-python mammoth_recreation_dataset.py
-python data_bishop2.py
-python bishop_sequoia_data.py
-python populate_tuolumne.py
-python add_peaks.py
-python add_trail_running.py
-python add_season_data.py
-python enrich_bouldering.py
-```
-Or, restore from the snapshot (all data is preserved in `sierra28k_snapshot.json`).
-
-**When making db changes**, run `export_snapshot.py` and commit the updated `sierra28k_snapshot.json` so the data backup stays current:
-```bash
-python export_snapshot.py
 python generate_site_data.py   # regenerates docs/data.json
-git add sierra28k_snapshot.json docs/data.json
+git add sierra28k.db docs/data.json
 git commit -m "Update dataset"
 ```
-
-**Canonical db location**: Jason's machine (`~/github/jasonvagner/sierra28k-site/sierra28k.db`). Turso also has a cloud copy.
 
 ## Files Generated
 
