@@ -725,7 +725,7 @@ body {
 .about-hint.hint-visible { opacity: 1; }
 .about-hint.hint-fade    { opacity: 0; }
 
-@media (max-width: 640px) { .about-hint { display: none; } }
+@media (min-width: 641px) { .about-hint { display: none; } }
 
 /* ── Responsive ───────────────────────────────────────────────────────────── */
 @media (max-width: 640px) {

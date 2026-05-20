@@ -604,15 +604,15 @@ async function init() {
   $('btn-got-it').addEventListener('click', closeAbout);
   $('modal-about').addEventListener('click', e => { if (e.target === $('modal-about')) closeAbout(); });
 
-  // Show about on first visit (no prior stars/view = genuinely first time)
+  // Show about modal on first visit — desktop only
   try {
-    if (!localStorage.getItem(LS_ABOUT)) openAbout();
+    if (!localStorage.getItem(LS_ABOUT) && window.matchMedia('(min-width: 641px)').matches) openAbout();
   } catch (_) {}
 
-  // Desktop-only hint tooltip on first visit
+  // Mobile-only hint tooltip on first visit
   try {
     const hint = $('about-hint');
-    if (hint && !localStorage.getItem(LS_HINT) && window.matchMedia('(min-width: 641px)').matches) {
+    if (hint && !localStorage.getItem(LS_HINT) && window.matchMedia('(max-width: 640px)').matches) {
       localStorage.setItem(LS_HINT, '1');
       setTimeout(() => {
         hint.hidden = false;
