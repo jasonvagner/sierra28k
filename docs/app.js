@@ -24,6 +24,7 @@ const DIFF_LABEL = ['','Very Easy','Easy','Moderate','Hard','Very Hard'];
 const LS       = 'sierra28k-stars-v1';
 const LS_VIEW  = 'sierra28k-view-v1';
 const LS_ABOUT = 'sierra28k-about-seen';
+const LS_HINT  = 'sierra28k-hint-seen';
 
 function saveView() {
   try {
@@ -606,6 +607,22 @@ async function init() {
   // Show about on first visit (no prior stars/view = genuinely first time)
   try {
     if (!localStorage.getItem(LS_ABOUT)) openAbout();
+  } catch (_) {}
+
+  // Desktop-only hint tooltip on first visit
+  try {
+    const hint = $('about-hint');
+    if (hint && !localStorage.getItem(LS_HINT) && window.matchMedia('(min-width: 641px)').matches) {
+      localStorage.setItem(LS_HINT, '1');
+      setTimeout(() => {
+        hint.hidden = false;
+        requestAnimationFrame(() => hint.classList.add('hint-visible'));
+        setTimeout(() => {
+          hint.classList.replace('hint-visible', 'hint-fade');
+          hint.addEventListener('transitionend', () => { hint.hidden = true; }, { once: true });
+        }, 10000);
+      }, 1200);
+    }
   } catch (_) {}
 
   // Hash change (visiting a shared link)
